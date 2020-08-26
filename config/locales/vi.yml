@@ -6,8 +6,13 @@ vi:
   products:
     product:
       add_to_cart: "Thêm giỏ hàng"
+    show:
+      description: "Description :"
+      author: "Tac gia"
+      add_to_cart: "Add to cart"
   layouts:
     header:
+      search: "Search"
       special_offers: "Today's special Offers !"
       login : "Đăng nhập"
       sign_up: "Đăng ký"
@@ -21,6 +26,9 @@ vi:
       about_us : "About Us"
       services: "Services"
       best_deals: "Best Deals"
+      store: "Store"
+      grocery: "Grocery"
+
   users:
     new:
       create_my_account: "Create new account"

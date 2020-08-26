@@ -8,7 +8,6 @@ class CreateOrders < ActiveRecord::Migration[6.0]
       t.string :address
       t.column :total_price, :integer
       t.column :status, :tinyint
-
       t.timestamps
     end
   end

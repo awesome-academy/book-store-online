@@ -7,8 +7,6 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :avatar
       t.string :address
       t.column :role, :integer, default: 0
-
-
       t.timestamps
     end
   end

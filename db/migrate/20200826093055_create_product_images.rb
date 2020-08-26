@@ -3,7 +3,6 @@ class CreateProductImages < ActiveRecord::Migration[6.0]
     create_table :product_images do |t|
       t.integer :product_id
       t.string :link
-
       t.timestamps
     end
   end

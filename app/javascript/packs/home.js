@@ -2,11 +2,14 @@ $(document).ready(function(){
   $('.dropdown').hover(
     function() {
       $('.dropdown-menu', this).stop( true, true ).slideDown('fast');
-      $(this).toggleClass('open');
-    },
+        $(this).toggleClass('open');
+      },
     function() {
-      $('.dropdown-menu', this).stop( true, true ).slideUp('fast');
-      $(this).toggleClass('open');
-    }
+        $('.dropdown-menu', this).stop( true, true ).slideUp('fast');
+          $(this).toggleClass('open');
+      }
   );
+  $('.list-product-detail').on('click',function () {
+    $('#main-image').attr('src',$(this).data('image'));
+  });
 });
