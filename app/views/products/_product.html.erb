@@ -1,0 +1,23 @@
+<div class="col-md-3 w3ls_w3l_banner_left">
+  <div class="hover14 column">
+    <div class="agile_top_brand_left_grid w3l_agile_top_brand_left_grid">
+      <div class="agile_top_brand_left_grid_pos"></div>
+      <div class="agile_top_brand_left_grid1">
+        <figure>
+          <div class="snipcart-item block">
+            <div class="snipcart-thumb">
+              <%= image_tag(product.main_image, class: "img-responsive")%>
+              <%= content_tag(:p, product.name, class: "display-name-product") %>
+              <h4><%= link_to product.price %></h4>
+            </div>
+            <div class="snipcart-details">
+              <form action="#" method="post">
+                <button type="button" class="btn btn-primary add-to-cart"><%= t ".add_to_cart" %></button>
+              </form>
+            </div>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>

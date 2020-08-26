@@ -1,0 +1,71 @@
+<div class="agileits_header">
+  <div class="w3l_offers">
+    <%= link_to t ".slogan"%>
+  </div>
+  <div class="w3l_search">
+    <%= form_tag home_path, method: :get  do %>
+      <%= text_field_tag :name %>
+      <%= submit_tag t ".search"%>
+    <% end %>
+  </div>
+  <div class="product_list_header">
+    <form action="#" method="post" class="last">
+      <fieldset>
+        <input type="hidden" name="cmd" value="_cart" />
+        <input type="hidden" name="display" value="1" />
+        <input type="submit" name="submit" value="View your cart" class="button" />
+      </fieldset>
+    </form>
+  </div>
+  <div class="w3l_header_right">
+    <ul>
+      <li class="dropdown profile_details_drop">
+        <%= link_to class: "dropdown-toggle", data: { toggle: "dropdown"} do %>
+          <i class="fa fa-user" aria-hidden="true"></i><span class="caret"></span>
+        <% end %>
+        <div class="mega-dropdown-menu">
+          <div class="w3ls_vegetables">
+            <ul class="dropdown-menu drp-mnu">
+              <li><%= link_to t ".login" %></li>
+              <li><%= link_to t ".sign_up" %></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="w3l_header_right1">
+    <h2><%= link_to t ".contact_us"%></h2>
+  </div>
+  <div class="clearfix"> </div>
+</div>
+<div class="logo_products">
+  <div class="container">
+    <div class="w3ls_logo_products_left">
+      <h1><%= link_to do%><span><%= t ".grocery" %></span><%=t ".store" %><% end %></h1>
+    </div>
+    <div class="w3ls_logo_products_left1">
+      <ul class="special_items">
+        <li><%= link_to t ".events" %><i>/</i></li>
+        <li><%= link_to t ".about_us"%><i>/</i></li>
+        <li><%= link_to t ".best_deals"%><i>/</i></li>
+        <li><%= link_to t ".services" %></li>
+      </ul>
+    </div>
+    <div class="w3ls_logo_products_left1">
+      <ul class="phone_email">
+        <li><i class="fa fa-phone" aria-hidden="true"></i><%= Settings.views.phone %></li>
+        <li><i class="fa fa-envelope-o" aria-hidden="true"></i><%= t ".email" %></li>
+      </ul>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</div>
+<div class="products-breadcrumb">
+  <div class="container">
+    <ul>
+      <li><i class="fa fa-home" aria-hidden="true"></i><%= link_to t(".home"), home_path %><span>|</span></li>
+      <li><%= t ".book"%></li>
+    </ul>
+  </div>
+</div>

@@ -1,2 +1,17 @@
 en:
-  title: "Hello world"
+  static_pages:
+    home:
+      title: "StoreBook"
+      new_product: "New Products"
+  products:
+    product:
+      add_to_cart: "Thêm giỏ hàng"
+  layouts:
+    header:
+      special_offers: "Today's special Offers !"
+      login : "Đăng nhập"
+      sign_up: "Đăng ký"
+      contact_us: "Contact Us"
+      store_book: "Store Book"
+      book : "Book"
+      home: "Home"
