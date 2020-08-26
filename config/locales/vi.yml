@@ -8,6 +8,7 @@ vi:
       add_to_cart: "Thêm giỏ hàng"
   layouts:
     header:
+      special_offers: "Today's special Offers !"
       login : "Đăng nhập"
       sign_up: "Đăng ký"
       contact_us: "Lien hệ"
@@ -20,6 +21,22 @@ vi:
       about_us : "About Us"
       services: "Services"
       best_deals: "Best Deals"
-      search: "Search"
-      grocery: "Grocery"
-      store: "Store"
+  users:
+    new:
+      create_my_account: "Create new account"
+      email: "Email"
+      name: "Name"
+      password: "Password"
+      signup: "Dang ky"
+      signup_page: "Trang dang ky tai khoan"
+      confirm_password: "Xac nhan lai mat khau"
+      create_account: "tao tai khoan"
+      success_notify: "Chao mung"
+      faild_notify: "Loi.Vui long lam lai"
+      register: "Register"
+    create:
+      success_notify: "Chao mung toi Sample APP"
+      faild_notify: "Tao tai khoan khong thanh cong"
+      please_check_your_email: "Kiem tra email de kich hoat tai khoan"
+      create_account: "Create an account"
+      sign_up: "sign_up"
