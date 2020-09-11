@@ -1,0 +1,15 @@
+<% provide :title, t(".title")  %>
+<body>
+  <%= render "layouts/header" %>
+  <div class="container">
+    <div class="w3ls_w3l_banner_nav_right_grid w3ls_w3l_banner_nav_right_grid_sub">
+      <h3><%= t ".new_product" %></h3>
+      <div class="w3ls_w3l_banner_nav_right_grid1">
+        <%= render @products%>
+        <div class="clearfix"></div>
+        <%= paginate @products %>
+      </div>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</body>

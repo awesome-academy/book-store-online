@@ -1,2 +1,25 @@
 vi:
-  title: "Xin Chao"
+  static_pages:
+    home:
+      title: "Cua Hang sach"
+      new_product: "Sản phẩm mơi"
+  products:
+    product:
+      add_to_cart: "Thêm giỏ hàng"
+  layouts:
+    header:
+      login : "Đăng nhập"
+      sign_up: "Đăng ký"
+      contact_us: "Lien hệ"
+      store_book: "Store Book"
+      book : "Sách"
+      home: "Home"
+      email: "store@grocery.com"
+      slogan: "Today's special Offers !"
+      events: "events"
+      about_us : "About Us"
+      services: "Services"
+      best_deals: "Best Deals"
+      search: "Search"
+      grocery: "Grocery"
+      store: "Store"

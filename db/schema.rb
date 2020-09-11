@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_28_060236) do
+ActiveRecord::Schema.define(version: 2020_09_10_071350) do
 
   create_table "authors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "profile"
+    t.text "profile"
     t.date "brith_day"
   end
 
@@ -34,6 +34,8 @@ ActiveRecord::Schema.define(version: 2020_08_28_060236) do
     t.integer "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["order_id"], name: "index_order_items_on_order_id"
+    t.index ["product_id"], name: "index_order_items_on_product_id"
   end
 
   create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
@@ -62,6 +64,8 @@ ActiveRecord::Schema.define(version: 2020_08_28_060236) do
     t.integer "category_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["category_id"], name: "index_product_categories_on_category_id"
+    t.index ["product_id"], name: "index_product_categories_on_product_id"
   end
 
   create_table "product_images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
@@ -69,6 +73,7 @@ ActiveRecord::Schema.define(version: 2020_08_28_060236) do
     t.string "link"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["product_id"], name: "index_product_images_on_product_id"
   end
 
   create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
@@ -77,11 +82,12 @@ ActiveRecord::Schema.define(version: 2020_08_28_060236) do
     t.string "main_image"
     t.integer "amount"
     t.integer "price"
-    t.datetime "published_date"
+    t.date "published_date"
     t.integer "hot"
     t.integer "publisher_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["publisher_id"], name: "index_products_on_publisher_id"
   end
 
   create_table "publishers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
@@ -100,6 +106,7 @@ ActiveRecord::Schema.define(version: 2020_08_28_060236) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "password_digest"
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
   add_foreign_key "product_authors", "authors"
