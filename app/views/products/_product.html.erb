@@ -6,7 +6,7 @@
         <figure>
           <div class="snipcart-item block">
             <div class="snipcart-thumb">
-              <%= image_tag(product.main_image, class: "img-responsive")%>
+              <%= link_to (image_tag(product.main_image, class: "img-responsive")), product_path(product)%>
               <%= content_tag(:p, product.name, class: "display-name-product") %>
               <h4><%= link_to product.price %></h4>
             </div>

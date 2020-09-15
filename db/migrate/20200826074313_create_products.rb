@@ -9,7 +9,6 @@ class CreateProducts < ActiveRecord::Migration[6.0]
       t.column :published_date, :datetime
       t.column :hot, :integer
       t.column :publisher_id, :integer
-
       t.timestamps
     end
   end
